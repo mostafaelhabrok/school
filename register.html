@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/> 
+<title>Register</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+    <datalist id="country">
+        <option value="Egypt">
+        <option value="USA">
+        <option value="England">
+        <option value="France">
+        <option value="Italy">
+    </datalist>
+<header>
+    <div>
+        <nav >
+            <a class="nav" href="index.html" target="_self">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="lessons.html" target="_self">Lessons</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="register.html" target="_self">Register</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="contact.html" target="_self">Contact us</a> 
+        </nav>
+    </div>
+ <h1>Register as a new student</h1>
+ <form action="index.html" method="POST">
+    <input type="text" placeholder="enter your first name" maxlength="12" required> <br>
+    <input type="text" placeholder="enter your middle name" maxlength="12" ><br>
+    <input type="text" placeholder="enter your last name" maxlength="12" required><br>
+    Gender: <label><input type="radio" name="gender" value="male" checked>Male</label>
+    <label><input type="radio" name="gender" value="female" >Female</label><br>
+    Country: <input type="text" list="country" required><br>
+    Grade: <select name="grade">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+        <option value="four">Four</option>
+        <option value="five">Five</option>
+        <option value="six">Six</option></select><br>
+    Choose your lessons: <label><input type="checkbox" value="arabic" checked>Arabic</label>
+    <label><input type="checkbox" value="english" >English</label>
+    <label><input type="checkbox" value="math" >Math</label><br>
+    <input type="email" placeholder="enter your email" required><br>
+    <input type="password" placeholder="enter your password" required><br>
+    <label>Upload your photo <input type="file" required></label><br>
+    <input type="submit" value="submit">
+    <input type="reset" value="reset">
+ </form>
+</header>
+
+</body>
+</html>

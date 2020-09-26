@@ -1,0 +1,39 @@
+h1{
+    font-size: 72px;
+    text-align: center;
+    color: red;
+    opacity: 0.7;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+}
+input{
+
+    color: red;
+}
+label{
+
+    font-size: 22px;
+}
+.body{
+    background-color: rgba(57, 196, 154, 0.781);
+    background:linear-gradient(90deg, rgba(38, 202, 202, 0.7) 0%, rgba(122, 206, 43, 0.7) 100%);
+}
+table{
+    font-size: 26px;
+    margin: auto;
+   
+}
+th{
+    color: blue;
+}
+.nav{
+    background-color: greenyellow;
+    border: 2px solid red;
+    font-size: 22px;
+    font-family: comic,sans-serif ;
+}
+footer{
+    background-color: cyan;
+}
