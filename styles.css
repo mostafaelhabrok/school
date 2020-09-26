@@ -37,3 +37,7 @@ th{
 footer{
     background-color: cyan;
 }
+video{
+    width: 100%;
+    height: auto;
+}
