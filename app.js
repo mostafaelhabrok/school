@@ -1,13 +1,20 @@
-const regForm = document.getElementById('register_form');
-//const stdContainer = document.getElementById('students');
-function addStudent(){
-    const newStd= document.createElement('a');
-    newStd.innerHTML="hey";
-    location.replace("students.html");
-    //stdContainer.insertAdjacentElement('afterbegin',newStd);
- }
-    
- regForm.addEventListener('submit',addStudent);
+(function($){
+    $(document).ready(function(){
+$('#logout').click(function(){
+  document.cookie = "login=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/'";
 
 
-   
+});
+
+
+
+
+
+
+
+
+
+
+
+    })
+})(jQuery); 

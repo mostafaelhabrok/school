@@ -21,6 +21,8 @@ label{
     background:linear-gradient(90deg, rgba(38, 202, 202, 0.7) 0%, rgba(122, 206, 43, 0.7) 100%);
 }
 table{
+    height: 80%;
+    width: 80%;
     font-size: 26px;
     margin: auto;
    
@@ -40,4 +42,7 @@ footer{
 video{
     width: 100%;
     height: auto;
+}
+#logout{
+    float: right;
 }
