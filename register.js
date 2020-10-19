@@ -3,7 +3,7 @@ $(document).ready(function(){
     
 
 
-    var close ;
+    //var close ;
     
    $('#register_form').submit(function(){
     const registerStudent = function(){
@@ -11,7 +11,7 @@ $(document).ready(function(){
         localStorage.setItem(localStorage.length,JSON.stringify(newStudent));
         if (window.confirm("registered successfully \n  login?!!! ")) { 
          window.open('index.html');
-         close=true;
+         //close=true;
       }
     
     };
@@ -41,7 +41,7 @@ $(document).ready(function(){
     }
 
 }
-    if(close==true){window.close()};
+    //if(close==true){window.close()};
       
    });
    
