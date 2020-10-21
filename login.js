@@ -1,7 +1,8 @@
 (function($){
+    if(document.cookie.split('=')[1]=='true'){location.href='home.html'};
     $(document).ready(function(){
 
-        if(document.cookie.split('=')[1]=='true'){location.href='home.html'};
+        
 
 $('#login').click(function(){
     //document.cookie = "login=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/'";
