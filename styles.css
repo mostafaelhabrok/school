@@ -34,10 +34,7 @@ th{
 footer{
     background-color: cyan;
 }
-video{
-    width: auto;
-    height: auto;
-}
+
 #logout{
     float: right;
 }
