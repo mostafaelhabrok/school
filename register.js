@@ -2,9 +2,7 @@
 $(document).ready(function(){
     
 
-
-    //var close ;
-    
+   
    $('#register_form').submit(function(){
     const registerStudent = function(){
         const newStudent = {'mail':mail,'pass':pass};

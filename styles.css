@@ -23,24 +23,19 @@ label{
 table{
     height: 80%;
     width: 80%;
-    font-size: 26px;
+   
     margin: auto;
    
 }
 th{
     color: blue;
 }
-.nav{
-    background-color: greenyellow;
-    border: 2px solid red;
-    font-size: 22px;
-    font-family: comic,sans-serif ;
-}
+
 footer{
     background-color: cyan;
 }
 video{
-    width: 100%;
+    width: auto;
     height: auto;
 }
 #logout{
