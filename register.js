@@ -2,10 +2,9 @@
 $(document).ready(function(){
     
 
-   
    $('#register_form').submit(function(){
     const registerStudent = function(){
-        const newStudent = {'mail':mail,'pass':pass};
+        const newStudent = {'mail':mail,'pass':pass,'grade':grade};
         localStorage.setItem(localStorage.length,JSON.stringify(newStudent));
         if (window.confirm("registered successfully \n  login?!!! ")) { 
          window.open('index.html');
@@ -16,6 +15,7 @@ $(document).ready(function(){
 
     const mail = $('#mail').val();
     const pass = $('#pass').val();
+    const grade = $('#grade').val();
     var x=[];
     var bool = true;
     if(localStorage.length==0){registerStudent();}
@@ -43,7 +43,9 @@ $(document).ready(function(){
       
    });
    
-   
+   $("#test").click(function(){
+       console.log($("#grade").val())
+   });
     
 
 })

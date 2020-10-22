@@ -15,13 +15,15 @@ $('#login').click(function(){
     for(var i = 0 ; i<localStorage.length;i++){
         x[i] = JSON.parse(localStorage.getItem(i));
 if(mail==x[i].mail && pass==x[i].pass){
-bool=false;
+localStorage.setItem('currentgrade',x[i].grade);
+    bool=false;
 document.cookie="login=true;max-age=31536000;path='/'";
 /*var cook = document.cookie;
 var cook1 = cook.split(';');
 var cook2 = cook1[0].split('=');
 console.log(cook2[1]);*/
 console.log(document.cookie.split(';')[0].split('=')[1]);
+
 location.href='home.html';
     break;
 
