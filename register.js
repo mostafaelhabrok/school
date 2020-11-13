@@ -1,7 +1,68 @@
 (function($){
 $(document).ready(function(){
     
+   document.getElementById("grade").onchange = function(){
+     switch (this.value) {
+         case "one":
+             document.getElementById("english").removeAttribute("disabled");
+             document.getElementById("science").removeAttribute("disabled");
+             document.getElementById("french").setAttribute("disabled", "true");
+             document.getElementById("deutsch").setAttribute("disabled", "true");
+             document.getElementById("chemistry").setAttribute("disabled", "true");
+             document.getElementById("physics").setAttribute("disabled", "true");
+             document.getElementById("biology").setAttribute("disabled", "true");
 
+
+             break;
+         case "two":
+            document.getElementById("english").removeAttribute("disabled");
+            document.getElementById("science").removeAttribute("disabled");
+            document.getElementById("french").setAttribute("disabled","true");
+            document.getElementById("deutsch").setAttribute("disabled","true");
+            document.getElementById("chemistry").setAttribute("disabled","true");
+            document.getElementById("physics").setAttribute("disabled","true");
+            document.getElementById("biology").setAttribute("disabled","true");
+             break;
+         case "three":
+            document.getElementById("english").removeAttribute("disabled");
+            document.getElementById("science").removeAttribute("disabled");
+            document.getElementById("french").setAttribute("disabled","true");
+            document.getElementById("deutsch").setAttribute("disabled","true");
+            document.getElementById("chemistry").setAttribute("disabled","true");
+            document.getElementById("physics").setAttribute("disabled","true");
+            document.getElementById("biology").setAttribute("disabled","true");
+             break;
+         case "four":
+            document.getElementById("english").setAttribute("disabled","true");
+            document.getElementById("science").setAttribute("disabled","true");
+            document.getElementById("french").removeAttribute("disabled");
+            document.getElementById("deutsch").setAttribute("disabled","true");
+            document.getElementById("chemistry").removeAttribute("disabled");
+            document.getElementById("physics").removeAttribute("disabled");
+            document.getElementById("biology").setAttribute("disabled","true");
+             break;
+         case "five":
+            document.getElementById("english").setAttribute("disabled","true");
+            document.getElementById("science").setAttribute("disabled","true");
+            document.getElementById("french").removeAttribute("disabled");
+            document.getElementById("deutsch").setAttribute("disabled","true");
+            document.getElementById("chemistry").removeAttribute("disabled");
+            document.getElementById("physics").removeAttribute("disabled");
+            document.getElementById("biology").setAttribute("disabled","true");
+             break;
+         case "six":
+            document.getElementById("english").setAttribute("disabled","true");
+            document.getElementById("science").setAttribute("disabled","true");
+            document.getElementById("french").setAttribute("disabled","true");
+            document.getElementById("deutsch").removeAttribute("disabled");
+            document.getElementById("chemistry").setAttribute("disabled","true");
+            document.getElementById("physics").removeAttribute("disabled");
+            document.getElementById("biology").removeAttribute("disabled");
+             break;    
+     
+         
+     }
+   };
    $('#register_form').submit(function(){
     const registerStudent = function(){
         const newStudent = {'mail':mail,'pass':pass,'grade':grade};
@@ -43,9 +104,9 @@ $(document).ready(function(){
       
    });
    
-   $("#test").click(function(){
+/*    $("#test").click(function(){
        console.log($("#grade").val())
-   });
+   }); */
     
 
 })

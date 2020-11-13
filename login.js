@@ -24,7 +24,7 @@ var cook2 = cook1[0].split('=');
 console.log(cook2[1]);*/
 console.log(document.cookie.split(';')[0].split('=')[1]);
 
-location.href='home.html';
+location.href='index.html';
     break;
 
 }
