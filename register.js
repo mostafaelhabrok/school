@@ -64,49 +64,41 @@ $(document).ready(function(){
      }
    };
    $('#register_form').submit(function(){
-    const registerStudent = function(){
-        const newStudent = {'mail':mail,'pass':pass,'grade':grade};
-        localStorage.setItem(localStorage.length,JSON.stringify(newStudent));
-        if (window.confirm("registered successfully \n  login?!!! ")) { 
-         window.open('index.html');
-         //close=true;
-      }
+    const register = function(){
+        const newStudent = {'fname':fname,'mname':mname,'lname':lname,'grade':grade,'country':country,'gender':gender,'lessons':lessons};
+       const current = localStorage.getItem("currentlogin");
+        sessionStorage.setItem(current,JSON.stringify(newStudent));
+      //  document.cookie="register=true;max-age=31536000;path='/'";
+      //location.href="index.html";
+      window.alert("registered successfully"); 
+       
+      //  location.replace("/index.html");
+        
+    
     
     };
 
-    const mail = $('#mail').val();
-    const pass = $('#pass').val();
+    const fname = $('#fname').val();
+    const mname = $('#mname').val();
+    const lname = $('#lname').val();
     const grade = $('#grade').val();
-    var x=[];
-    var bool = true;
-    if(localStorage.length==0){registerStudent();}
-    else{
-    for(var i = 0 ; i<localStorage.length;i++){
-        x[i] = JSON.parse(localStorage.getItem(i));
-        if(mail==x[i].mail){
-            if (window.confirm("already registered \n  login?!!! ")) { 
-                 window.open('index.html');
-                 close=true;
-              }
-            bool = false;
-        break;
-    }
-       
-    }
-    if(bool==true && localStorage.length!=0){
+    const country = $('#countryname').val();
+    const gender = $('input[name=gender]:checked', '#register_form').val();
+    const lessons_array = $('input[name="lessons"]:checked');
+    const lessons = [];
+    for (var i = 0 ; i<lessons_array.length;i++){
+        lessons[i]= lessons_array[i].value;
+    };
+    //console.log(lessons);
 
-        registerStudent();
-
-    }
-
-}
-    //if(close==true){window.close()};
+    register();
       
+
+
+
    });
    
-/*    $("#test").click(function(){
-       console.log($("#grade").val())
-   }); */
+
     
 
 })

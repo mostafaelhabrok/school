@@ -26,18 +26,19 @@
     </datalist>
 <header>
     <div class="row container-fluid">
-        <div class="col-10 float-left">
+        <div id="container2" class="col-10 float-left">
             <nav class="nav nav-pills">
               <a class="nav-link " href="index.html" target="_self">Home</a>
               <a class="nav-link " href="about.html" target="_self">About</a>
               <a class="nav-link" href="contact.html" target="_self">Contact us</a>
-              <a class="nav-link" href="lessons.html" target="_self" id="lessons">Lessons</a>
-              <a class="nav-link" href="teachers.html" target="_self" id="teachers">Teachers</a>
-              <a class="nav-link" href="students.html" target="_self" id="students">Students</a>
-              <a class="nav-link active" href="register.html" target="_self" id="register">Register</a>
+              <a class="nav-link" href="lessons.html" target="_self" id="lessons" hidden>Lessons</a>
+              <a class="nav-link" href="teachers.html" target="_self" id="teachers" hidden>Teachers</a>
+              <a class="nav-link" href="students.html" target="_self" id="students" hidden>Students</a>
+              <a class="nav-link active" href="register.html" target="_self" id="register" hidden>Register</a>
             </nav>
           </div>
-          <div class="col-2 float-right">
+          <div id="container3" class="col-2 ">
+              <div class="float-right">
             <nav class="nav nav-pills ">
           
           
@@ -45,13 +46,14 @@
           
               <a class="nav-link btn btn-danger" href="index.html" id="logout">Logout</a>
             </nav>
+        </div>
           </div>
         </div>
 </header>
 <div class="container-fluid">
  <h1 class="display-1">Register as a new student</h1>
  <div class="container-fluid">
- <form id="register_form"  method="POST" >
+ <form id="register_form" action="index.html" method="POST" >
     <div class="form-row">
     <div class="col-auto">
     <input class="form-control" placeholder="Enter your first name" id="fname" type="text"  maxlength="12" required> <br>
@@ -67,7 +69,7 @@
 <div class="form-row">
 <div class="form-group col-auto">
    <p> Country:</p>
-     <input class="form-control " type="text" list="country" required>
+     <input class="form-control " type="text" list="country" id="countryname" required>
 </div>
 <div class="form-group col-auto">
    <p> Grade:</p>
@@ -93,23 +95,23 @@
         <div class="col-auto">
             <p>Choose your lessons: </p>
         </div>
-        <div class="col-auto"> <input id="arabic" class="form-check-input" type="checkbox" value="arabic" disabled  checked><label
+        <div class="col-auto"> <input id="arabic" class="form-check-input" type="checkbox" name="lessons" value="arabic" disabled  checked><label
                 class="form-check-label" for="arabic">Arabic</label></div>
-        <div class="col-auto"><input id="english" class="form-check-input" type="checkbox" value="english" ><label
+        <div class="col-auto"><input id="english" class="form-check-input" type="checkbox" name="lessons" value="english" ><label
                 class="form-check-label" for="english">English</label></div>
-        <div class="col-auto"> <input id="math" class="form-check-input" type="checkbox" value="math" disabled checked><label
+        <div class="col-auto"> <input id="math" class="form-check-input" type="checkbox" name="lessons" value="math" disabled checked><label
                 class="form-check-label" for="math">Math</label></div>
-        <div class="col-auto"> <input id="science" class="form-check-input" type="checkbox" value="science"><label
+        <div class="col-auto"> <input id="science" class="form-check-input" type="checkbox" name="lessons" value="science"><label
                 class="form-check-label" for="science">Science</label></div>
-        <div class="col-auto"> <input id="physics" class="form-check-input" type="checkbox" value="physics" disabled><label
+        <div class="col-auto"> <input id="physics" class="form-check-input" type="checkbox" name="lessons" value="physics" disabled><label
                 class="form-check-label" for="physics">Physics</label></div>
-        <div class="col-auto"> <input id="chemistry" class="form-check-input" type="checkbox" value="chemistry" disabled><label
+        <div class="col-auto"> <input id="chemistry" class="form-check-input" type="checkbox" name="lessons" value="chemistry" disabled><label
                 class="form-check-label" for="chemistry">Chemistry</label></div>
-        <div class="col-auto"> <input id="biology" class="form-check-input" type="checkbox" value="biology" disabled><label
+        <div class="col-auto"> <input id="biology" class="form-check-input" type="checkbox" name="lessons" value="biology" disabled><label
                 class="form-check-label" for="biology">Biology</label></div>
-        <div class="col-auto"> <input id="french" class="form-check-input" type="checkbox" value="french" disabled><label
+        <div class="col-auto"> <input id="french" class="form-check-input" type="checkbox" name="lessons" value="french" disabled><label
                 class="form-check-label" for="french">French</label></div>
-        <div class="col-auto"> <input id="deutsch" class="form-check-input" type="checkbox" value="deutsch" disabled><label
+        <div class="col-auto"> <input id="deutsch" class="form-check-input" type="checkbox" name="lessons" value="deutsch" disabled><label
                 class="form-check-label" for="deutsch">Deutsch</label></div>
 
 

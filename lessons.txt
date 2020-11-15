@@ -40,9 +40,9 @@
 ],
 "six":
 [
-{"teachername":"rami medhat","coursename":"History","time":"08:00 AM","place":"A6"},
+{"teachername":"rami medhat","coursename":"Arabic","time":"08:00 AM","place":"A6"},
 {"teachername":"mahmoud ahmed","coursename":"Math","time":"10:00 AM","place":"E6"},
-{"teachername":"basem said","coursename":"Germany","time":"12:00 PM","place":"C6"},
+{"teachername":"basem said","coursename":"Deutsch","time":"12:00 PM","place":"C6"},
 {"teachername":"mai ali","coursename":"Biology","time":"02:00 PM","place":"B6"},
 {"teachername":"osama gad","coursename":"Physics","time":"04:00 PM","place":"D6"}
 ]
