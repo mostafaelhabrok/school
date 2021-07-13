@@ -6,8 +6,12 @@
 
 
     $('#loginform').submit(function () {
+     // $('#loginform').attr("method","POST");
+
+
+
       //document.cookie = "login=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/'";
-      var mail = $('#loginmail').val();
+     /* var mail = $('#loginmail').val();
       var pass = $('#loginpass').val();
       var bool = true;
       var x = [];
@@ -36,23 +40,30 @@
           window.alert("wrong username or password");
 
         }
-      }
+      }*/
     });
 
 
 
     $('#signupform').submit(function () {
-      const signup = function () {
+     /* const signup = function () {
         const newStudent = { 'mail': mail, 'pass': pass };
         localStorage.setItem(localStorage.length, JSON.stringify(newStudent));
 
 
-      };
+      };*/
 
       const mail = $('#signupmail').val();
       const pass = $('#signuppass1').val();
+      const pass2 = $('#signuppass2').val();
+      if (pass2!=pass) {
+        alert("password confirmation is not correct");
+        event.preventDefault();
+      }
+
       //const grade = $('#grade').val();
-      var x = [];
+
+     /* var x = [];
       var bool = true;
      // if (localStorage.length == 0) { signup(); }
      // else {
@@ -68,16 +79,15 @@
         }
 
      // }
-      if (bool == true/* && localStorage.length != 0*/) {
+      if (bool == true) {
 
         signup();
 
-      }
+      }*/
 
     })
     //if(close==true){window.close()};
       
-
 
 
 

@@ -11,30 +11,58 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 <script src="jquery-3.5.1.min.js" ></script>
 <script src="app.js" type="text/javascript"></script>
-<script src="lessons.js" type="text/javascript"></script>
+<script src="lesson.js" type="text/javascript"></script>
+<?php   
+require("common.php");
 
+   
+
+   
+
+?>
 </head>
 <body class="body">
 <header>
+
+<input type="hidden" name="check2" value="<?php  check2($db_connection);?>" id="check2">
+
+<input type="hidden" name="select" value="<?php  select($db_connection);?>" id="select">
+<input type="hidden" name="type" value="<?php echo type($db_connection);?>" id="type">
+
+
     <div class="row container-fluid">
-    <div id="container2" class="col-10 float-left">
+    <div id="container2" class="col-9 float-left">
         <nav class="nav nav-pills">
-          <a class="nav-link " href="index.html" target="_self">Home</a>
-          <a class="nav-link " href="about.html" target="_self">About</a>
-          <a class="nav-link" href="contact.html" target="_self">Contact us</a>
-          <a class="nav-link active" href="lessons.html" target="_self" id="lessons" hidden>Lessons</a>
-          <a class="nav-link" href="teachers.html" target="_self" id="teachers" hidden>Teachers</a>
-          <a class="nav-link" href="students.html" target="_self" id="students" hidden>Students</a>
-          <a class="nav-link" href="register.html" target="_self" id="register" hidden>Register</a>
+          <a class="nav-link " href="index.php" target="_self">Home</a>
+          <a class="nav-link " href="about.php" target="_self">About</a>
+          <a class="nav-link " href="gallery.php" target="_self">Gallery</a>
+
+          <a class="nav-link" href="contact.php" target="_self">Contact us</a>
+          <a class="nav-link active" href="lessons.php" target="_self" id="lessons" hidden>Lessons</a>
+          <a class="nav-link" href="teachers.php" target="_self" id="teachers" hidden>Teachers</a>
+          <a class="nav-link" href="students.php" target="_self" id="students" hidden>Students</a>
+          <a class="nav-link" href="register.php" target="_self" id="register" hidden>Register</a>
         </nav>
       </div>
-      <div id="container3" class="col-2 ">
+      <div id="container3" class="col-3 ">
         <div class="float-right">
         <nav class="nav nav-pills ">
       
-      
-          <a class="nav-link btn btn-danger" href="index.html" id="logout">Logout</a>
-        </nav>
+        <div class="dropdown"  id="profile" hidden>
+  <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    My Profile
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" id="profileedit" href="profileedit.php">Edit Profile</a>
+    <a class="dropdown-item" href="password.php">Edit Password</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <form action="index.php" method="POST">
+          <button type="submit" name="logout"  class="nav-link btn btn-danger"   id="logout" hidden>Logout</a>
+      </form>        </nav>
       </div>
       </div>
     </div>
@@ -42,7 +70,7 @@
 
 
 
- <h1 class="display-1">Lessons and Teachers</h1>
+ <h1 class="display-1">Schedule</h1>
  <div class="table-responsive-sm container-fluid">
 <table border="1px" class="table table-bordered table-hover">
   <caption>List of Lessons</caption>
@@ -79,4 +107,5 @@
 </header>
 
 </body>
+
 </html>
