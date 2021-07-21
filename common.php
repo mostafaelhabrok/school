@@ -1,11 +1,19 @@
 <?php 
 
-define("db_Server","localhost");
+/* define("db_Server","localhost");
 define("db_Database","school");
 define("db_User","root");
-define("db_Password","root");
+define("db_Password","root"); */
+
+define("db_Server","mysql-39895-0.cloudclusters.net");
+define("db_Database","school");
+define("db_User","admin");
+define("db_Password","x3FRbRLi");
+define("db_Port",39936);
+
+
 //require("C:/xampp/php/pear/PEAR/common.php");
-$db_connection = mysqli_connect(db_Server,db_User,db_Password);
+$db_connection = mysqli_connect(db_Server,db_User,db_Password,null,db_Port);
 if(!$db_connection) die("unable to connect to database server".mysqli_error($db_connection));
 mysqli_select_db($db_connection,db_Database) or die ("unable to select database ".mysqli_error($db_connection));
 
