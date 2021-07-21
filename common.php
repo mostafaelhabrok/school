@@ -5,11 +5,17 @@ define("db_Database","school");
 define("db_User","root");
 define("db_Password","root"); */
 
-define("db_Server","mysql-39895-0.cloudclusters.net");
+/* define("db_Server","mysql-39895-0.cloudclusters.net");
 define("db_Database","school");
 define("db_User","admin");
 define("db_Password","x3FRbRLi");
-define("db_Port",39936);
+define("db_Port",39936); */
+
+define("db_Server","db4free.net ");
+define("db_Database","schooldbproject1");
+define("db_User","mostafaschool1");
+define("db_Password","root1234");
+define("db_Port",3306);
 
 
 //require("C:/xampp/php/pear/PEAR/common.php");
